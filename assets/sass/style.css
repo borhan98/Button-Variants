@@ -1,15 +1,117 @@
 /*-- Defaul Styles --*/
-/*-- Variables --*/
+:root {
+  /*-- color --*/
+  --color-primary: #333399;
+  --color-secondary: #6A0DAD;
+  --color-danger: #DC281E;
+  --color-warning: #FFC107;
+  --color-violet: rgb(227, 30, 227);
+  --color-heading: #192335;
+  --color-body: #6b7385;
+  --color-white: #ffffff;
+  --color-white-off: #FFFFFFAB;
+  --color-dark: #27272E;
+  --color-darker: #192335;
+  --color-black: #111113;
+  --color-gray1: #A1A9AC;
+  --color-gray2: #f4f5f7;
+  --color-gray3: rgba(207, 207, 207, .24);
+  --color-gray-light: #F6F6F6;
+  --color-gray-lighter: #ebebeb;
+  --primary-opacity: #2f57ef21;
+  --secondary-opacity: #b966e721;
+  --white-opacity: #ffffff21;
+  --danger-opacity: #FF000310;
+  --warning-opacity: #FF8F3C10;
+  --success-opacity: #3EB75E10;
+  --black-opacity: rgba(0, 0, 0, 0.04);
+  /*-- transparent color --*/
+  --primary-transparent: hsla(240, 100%, 50%, 0.05);
+  /*-- Gradient --*/
+  --gradient-btn-1: linear-gradient(to right, #673AB7 0%, #512DA8 51%, #673AB7 100%);
+  --gradient-btn-2: linear-gradient(to right, #f46b45 0%, #eea849 51%, #f46b45 100%);
+  --gradient-btn-3: linear-gradient(to right, #F7971E 0%, #FFD200 51%, #F7971E 100%);
+  --gradient-btn-4: linear-gradient(to right, #DCE35B 0%, #45B649 51%, #DCE35B 100%);
+  --gradient-btn-5: linear-gradient(to right, #ee0979 0%, #ff6a00 51%, #ee0979 100%);
+  --gradient-btn-6: linear-gradient(to right, #56ab2f 0%, #a8e063 51%, #56ab2f 100%);
+  --gradient-btn-7: linear-gradient(to right, #F00000 0%, #DC281E 51%, #F00000 100%);
+  --gradient-btn-8: linear-gradient(to right, #000000 0%, #434343 51%, #000000 100%);
+  --gradient-btn-9: linear-gradient(to right, #C02425 0%, #F0CB35 51%, #C02425 100%);
+  --gradient-btn-10: linear-gradient(to right, #fe8c00 0%, #f83600 51%, #fe8c00 100%);
+  --gradient-btn-rainbow: linear-gradient(to right, #F7971E 0%, #FFD200 51%, #F7971E 100%) --gradient-rainbow: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+      linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+  /*-- font weight --*/
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+  /*-- border radius --*/
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-full: 100%;
+  /*-- shadow --*/
+  --shadow-1: 0px 6px 34px rgba(215, 216, 222, 0.41);
+  /*-- gap --*/
+  --gap-4: 4px;
+  --gap-8: 8px;
+  --gap-12: 12px;
+  --gap-16: 16px;
+  --gap-20: 20px;
+  --gap-24: 24px;
+  /*-- Gradient --*/
+  /*-- Gradient --*/
+  /*-- Gradient --*/
+}
+
 /*-- Reset Styles --*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: none;
+}
+
+body {
+  background: var(--color-gray-light);
+  color: var(--color-body);
+}
+
+/*-- gap --*/
+.gap--4 {
+  gap: 4px;
+}
+
+.gap--8 {
+  gap: 8px;
+}
+
+.gap--12 {
+  gap: 12px;
+}
+
+.gap--16 {
+  gap: 16px;
+}
+
+.gap--20 {
+  gap: 20px;
+}
+
+.gap--24 {
+  gap: 24px;
 }
 
 /*-- Element Styles --*/
-.main-btn {
-  padding: 0 24px;
-  height: 50px;
-  line-height: 50px;
+.btn-wrapper {
+  display: flex;
+  gap: var(--gap-24);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */
