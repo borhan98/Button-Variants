@@ -1,13 +1,18 @@
 /*-- Defaul Styles --*/
+/*-- google font --*/
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
 :root {
   /*-- color --*/
-  --color-primary: #333399;
-  --color-secondary: #6A0DAD;
+  --color-primary: #2f57ef;
+  --color-secondary: #b349ff;
   --color-danger: #DC281E;
   --color-warning: #FFC107;
-  --color-violet: rgb(227, 30, 227);
+  --color-violet: #d806d8;
+  --color-coral: #E9967A;
+  --color-pink: #DB7093;
   --color-heading: #192335;
   --color-body: #6b7385;
+  --color-success: #3EB75E;
   --color-white: #ffffff;
   --color-white-off: #FFFFFFAB;
   --color-dark: #27272E;
@@ -23,6 +28,9 @@
   --white-opacity: #ffffff21;
   --danger-opacity: #FF000310;
   --warning-opacity: #FF8F3C10;
+  --violet-opacity: #d806d817;
+  --coral-opacity: #e9967a23;
+  --pink-opacity: #db709431;
   --success-opacity: #3EB75E10;
   --black-opacity: rgba(0, 0, 0, 0.04);
   /*-- transparent color --*/
@@ -41,6 +49,14 @@
   --gradient-btn-rainbow: linear-gradient(to right, #F7971E 0%, #FFD200 51%, #F7971E 100%) --gradient-rainbow: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
       linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
       linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+  /*-- transition --*/
+  --transition: 0.3s;
+  --transition-1: all 0.4s ease-in-out;
+  --transition-2: 256ms ease-in-out;
+  --transition-3: transform .85s cubic-bezier(.23, 1, .32, 1), background .3s, border .3s, border-radius .3s, box-shadow .3s;
+  --transition-4: all .25s cubic-bezier(.645, .045, .355, 1);
+  /*-- font family --*/
+  --font-primary: "Golos Text", sans-serif;
   /*-- font weight --*/
   --fw-light: 300;
   --fw-normal: 400;
@@ -49,14 +65,51 @@
   --fw-bold: 700;
   --fw-extrabold: 800;
   --fw-black: 900;
+  /*-- font size --*/
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-22: 22px;
+  --fs-24: 24px;
+  --fs-26: 26px;
+  --fs-28: 28px;
+  --fs-30: 30px;
+  --fs-32: 32px;
+  --fs-34: 34px;
+  --fs-36: 36px;
+  --fs-38: 38px;
+  --fs-40: 40px;
+  --fs-44: 44px;
+  --fs-48: 48px;
+  --fs-52: 52px;
+  --fs-56: 56px;
+  --fs-58: 58px;
+  /*-- heading font size --*/
+  --fs-h1: 56px;
+  --fs-h2: 44px;
+  --fs-h3: 32px;
+  --fs-h4: 24px;
+  --fs-h5: 20px;
+  --fs-h6: 18px;
   /*-- border radius --*/
   --radius-4: 4px;
   --radius-6: 6px;
   --radius-8: 8px;
   --radius-10: 10px;
+  --radius-44: 44px;
   --radius-full: 100%;
   /*-- shadow --*/
   --shadow-1: 0px 6px 34px rgba(215, 216, 222, 0.41);
+  --shadow-2: 0 15px 34px 0 rgba(175, 181, 204, 0.32);
+  --shadow-3: 0 5px 15px 0 rgba(85, 74, 101, 0.37);
+  --shadow-5: 0px 20px 70px 0px rgba(0, 0, 0, 0.1);
+  --shadow-7: 0px 15px 30px -2px rgba(0, 0, 0, 0.1);
+  --shadow-8: -5px 18px 60px 0 rgba(210, 210, 234, 0.4);
+  --shadow-9: 0 13px 48px 0 rgba(215, 216, 222, 0.44);
+  --shadow-10: 0 13px 14px 0 rgba(129, 104, 145, 0.05);
+  --shadow-11: 0 0 10px 0 rgba(0, 0, 0, 0.06);
   /*-- gap --*/
   --gap-4: 4px;
   --gap-8: 8px;
@@ -107,11 +160,134 @@ body {
   gap: 24px;
 }
 
+.py--80 {
+  padding: 80px 0;
+}
+
 /*-- Element Styles --*/
-.btn-wrapper {
+/*-- button card --*/
+.btn-card {
+  padding: 44px 0;
+  background: var(--color-white);
+  box-shadow: var(--shadow-11);
+  border-radius: var(--radius-6);
   display: flex;
-  gap: var(--gap-24);
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  transition: var(--transition-4);
+}
+.btn-card:hover {
+  box-shadow: var(--shadow-1);
+}
+
+/*-- button --*/
+.main-btn {
+  padding: 0 36px;
+  height: 55px;
+  border-radius: var(--radius-6);
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--fs-18);
+  transition: var(--transition-1);
+}
+.main-btn:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+}
+.main-btn.btn--secondary {
+  background: var(--color-secondary);
+}
+.main-btn.btn--secondary:hover {
+  background: var(--color-primary);
+}
+.main-btn.btn--danger {
+  background: var(--color-danger);
+}
+.main-btn.btn--danger:hover {
+  background: var(--color-primary);
+}
+.main-btn.btn--warning {
+  background: var(--color-warning);
+}
+.main-btn.btn--warning:hover {
+  background: var(--color-primary);
+}
+.main-btn.btn--violet {
+  background: var(--color-violet);
+}
+.main-btn.btn--violet:hover {
+  background: var(--color-primary);
+}
+.main-btn.btn--coral {
+  background: var(--color-coral);
+}
+.main-btn.btn--coral:hover {
+  background: var(--color-primary);
+}
+.main-btn.btn--pink {
+  background: var(--color-pink);
+}
+.main-btn.btn--pink:hover {
+  background: var(--color-primary);
+}
+.main-btn.btn--success {
+  background: var(--color-success);
+}
+.main-btn.btn--success:hover {
+  background: var(--color-primary);
+}
+
+.bg-primary-opacity {
+  background: var(--primary-opacity) !important;
+  color: var(--color-primary) !important;
+}
+
+.bg-secondary-opacity {
+  background: var(--secondary-opacity) !important;
+  color: var(--color-secondary) !important;
+}
+
+.bg-danger-opacity {
+  background: var(--danger-opacity) !important;
+  color: var(--color-danger) !important;
+}
+
+.bg-warning-opacity {
+  background: var(--warning-opacity) !important;
+  color: var(--color-warning) !important;
+}
+
+.bg-violet-opacity {
+  background: var(--violet-opacity) !important;
+  color: var(--color-violet) !important;
+}
+
+.bg-pink-opacity {
+  background: var(--pink-opacity) !important;
+  color: var(--color-pink) !important;
+}
+
+.bg-coral-opacity {
+  background: var(--coral-opacity) !important;
+  color: var(--color-coral) !important;
+}
+
+.section-title .subtitle {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 20px;
+  height: 35px;
+  line-height: 33px;
+  border-radius: var(--radius-44);
+  background: var(--primary-opacity);
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.section-title .title {
+  color: var(--color-heading);
+  font-size: var(--fs-h2);
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

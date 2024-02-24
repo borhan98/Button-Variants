@@ -1,0 +1,21 @@
+.section-title {
+    
+    .subtitle {
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 0 20px;
+        height: 35px;
+        line-height: 33px;
+        border-radius: var(--radius-44);
+        background: var(--primary-opacity);
+        color: var(--color-primary);
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .title {
+        color: var(--color-heading);
+        font-size: var(--fs-h2);
+        font-weight: 700;
+    }
+}

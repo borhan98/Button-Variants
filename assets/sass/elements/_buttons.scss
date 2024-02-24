@@ -1,7 +1,92 @@
-.btn-wrapper {
+/*-- button card --*/
+.btn-card {
+    padding: 44px 0;
+    background: var(--color-white);
+    box-shadow: var(--shadow-11);
+    border-radius: var(--radius-6);
     display: flex;
-    gap: var(--gap-24);
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    transition: var(--transition-4);
+
+    &:hover {
+        box-shadow: var(--shadow-1);
+    }
+}
+
+/*-- button --*/
+.main-btn {
+    padding: 0 36px;
+    height: 55px;
+    border-radius: var(--radius-6);
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: var(--fs-18);
+    transition: var(--transition-1);
+
+    &:hover {
+        background: var(--color-secondary);
+        transform: translateY(-2px);
+    }
+
+    // solid color
+    &.btn--secondary {
+        background: var(--color-secondary);
+
+        &:hover {
+            background: var(--color-primary);
+        }
+    }
+
+    &.btn--danger {
+        background: var(--color-danger);
+
+        &:hover {
+            background: var(--color-primary);
+        }
+    }
+
+    &.btn--warning {
+        background: var(--color-warning);
+
+        &:hover {
+            background: var(--color-primary);
+        }
+    }
+
+    &.btn--violet {
+        background: var(--color-violet);
+
+        &:hover {
+            background: var(--color-primary);
+        }
+    }
+
+    &.btn--coral {
+        background: var(--color-coral);
+
+        &:hover {
+            background: var(--color-primary);
+        }
+    }
+
+    &.btn--pink {
+        background: var(--color-pink);
+
+        &:hover {
+            background: var(--color-primary);
+        }
+    }
+
+    &.btn--success {
+        background: var(--color-success);
+
+        &:hover {
+            background: var(--color-primary);
+        }
+    }
+
+
 }
